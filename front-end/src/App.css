@@ -1,0 +1,20 @@
+.navbar{
+  background-color: #383f4d;
+}
+.footer{
+  background-color: #383f4d;
+  margin:0px auto;
+  padding: 20px 0px 20px 0px;
+}
+/* .card {
+  min-height: 48px;
+  margin-bottom: -1px;
+  padding: 0 24px;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: 500;
+  font-size: 16px;
+  background: transparent;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 2px 2px 0 0;
+  zoom: 1;
+} */
