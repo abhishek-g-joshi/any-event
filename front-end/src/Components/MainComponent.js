@@ -3,6 +3,7 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import HomeComponent from './HomeComponent'
 import EVENTS from '../shared/events'
+import {BrowserRouter as Router,Route} from 'react-router-dom';
 
 class MainComponent extends Component {
     constructor(props){
@@ -14,11 +15,11 @@ class MainComponent extends Component {
     render() {
         return (
             <div>
-                <Header/>
-                <div className="container">
+                <Router>
+                <Header/>               
                     <HomeComponent events={this.state.events}/>
-                </div>
                 <Footer/>
+                </Router>
             </div>
         )
     }
