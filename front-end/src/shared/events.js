@@ -2,8 +2,10 @@ const EVENTS =[
     {
       "id": 0,
       "name": "WPL",
-      "image": "assets/images/download.jpg",
+      "image": 'download.jpg',
       "category": "Sport",
+      "label": "",
+      "price": "0.00",
       "featured": true,
       "description": "."
     },
