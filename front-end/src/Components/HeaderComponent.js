@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Nav,Navbar, NavbarBrand, Collapse, NavItem, NavLink, NavbarToggler} from 'reactstrap';
+import {Link} from 'react-router-dom';
  import '../App.css';
 
 class Header extends Component {
@@ -23,19 +24,21 @@ class Header extends Component {
             <>
                 <Navbar dark className='navbar'expand='md'>
                     <div className="container">
-                    <NavbarBrand to="/">AnyEvent</NavbarBrand>
+                    <Link to='/'>
+                        <NavbarBrand>AnyEvent</NavbarBrand>
+                    </Link>
                     <NavbarToggler onClick={this.toggleNav}/>
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <NavLink className="nav-link" to='/login'>
+                                <Link className="nav-link" to='/login'>
                                     <button type="button" class="btn btn-outline-warning">Log In</button>
-                                </NavLink>
+                                </Link>
                             </NavItem>
                             <NavItem>
-                                <NavLink className="nav-link" to='/singup'>
+                                <Link className="nav-link" to='/register'>
                                     <button type="button" class="btn btn-outline-warning">Sign Up</button>
-                                </NavLink>
+                                </Link>
                             </NavItem>
                         </Nav>  
                     </Collapse>

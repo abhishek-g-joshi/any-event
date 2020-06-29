@@ -9,7 +9,7 @@ class Footer extends Component {
         <div className="container">
          <h2 className="text-white">Company</h2>
          <ul className="list-unstyled">
-          <li ><Link to='/home'className="text-white" href="#">Home</Link></li>
+          <li ><Link to='/'className="text-white" >Home</Link></li>
           <li><Link to='/aboutus'className="text-white" href="#">About Us</Link></li>
           <li><Link to='/viewevents'className="text-white" href="#">Events</Link></li>
           <li><Link to='/contactus' className="text-white" href="contactus.html">Contact</Link></li>
