@@ -44,8 +44,8 @@ class HomeComponent extends Component {
       <div className="dark-overlay landing-inner">
        <div className="col-md-12 text-center">
           <br/><br/><br/><br/><br/><br/><br/><br/><br/>
-          <h1 className="display-2 mb-12 text-center font-weight-bold">AnyEvent</h1>
-          <h4 className="font-italic font-weight-normal">Easiest way to Publisize </h4>
+          <h1 className="display-2 mb-12 font-weight-bold">AnyEvent</h1>
+          <h4 className="font-italic font-weight-bold">Our passion is your perfect event. Publish or Participate. </h4>
         </div>
       </div>
       </div>
