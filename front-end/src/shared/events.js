@@ -3,41 +3,41 @@ const EVENTS =[
       "id": 0,
       "name": "WPL",
       "image": "assets/images/download.jpg",
-      "category": "Sport",
+      "category": "Live to Play",
       "label": "",
-      "price": "0.00",
+      "start": "0.00",
       "featured": true,
-      "description": "."
+      "description": "Invented by England, Ruled by India. One of the biggest sport tournament in WCE."
     },
     {
       "id": 1,
       "name": "Hackathon2020",
       "image": "assets/images/logo-dark12.png",
-      "category": "Innovation",
+      "category": "Think Build and Deploy",
       "label": "",
-      "price": "1.99",
+      "start": "1.99",
       "featured": false,
-      "description": "It will be an open platform application development and it will be on the participating team’s discretion whether to develop a web application or mobile application or any kind of software or hardware for any idea under provided domains."
+      "description": "It will be an open platform application development. "
     },
     {
       "id": 2,
       "name": "Techumen",
       "image": "assets/images/techumen.jpg",
-      "category": "Technical",
+      "category": "A National Level Technical Event",
       "label": "New",
-      "price": "1.99",
+      "start": "1.99",
       "featured": false,
-      "description": "A quintessential ConFusion experience, is it a vada or is it a donut?"
+      "description": "A technical events including workshpos,competations and may more."
     },
     {
       "id": 3,
       "name": "Abhudyaaya",
       "image": "assets/images/Rotract.jpg",
-      "category": "social",
+      "category": "First Step Towards Social",
       "label": "",
-      "price": "2.99",
+      "start": "2.99",
       "featured": false,
-      "description": "A delectable, semi-sweet New York Style Cheese Cake, with Graham cracker crust and spiced with Indian cardamoms"
+      "description": "It is first social event organized by Rotract Club."
     }
   ]
 

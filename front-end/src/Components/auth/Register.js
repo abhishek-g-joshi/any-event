@@ -97,7 +97,7 @@ class Register extends Component {
                                     required/>
                                 </Row>  
                                 <Row className="form-group">
-                                 <Button type="submit" className="btn btn-info btn-block mt-4" color="primary">Sign Up</Button>
+                                 <Button type="submit" className="btn btn-info btn-block " color="primary">Sign Up</Button>
                                 </Row> 
                             </Form>
                         </div>

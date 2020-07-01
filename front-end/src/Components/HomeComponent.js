@@ -28,16 +28,7 @@ function RenderEvent({ event }) {
   );
 }
 class HomeComponent extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
   render() {
-    const event = this.props.events.map((event) => {
-      return (
-        <RenderEvent event={event}/>
-      );
-    });
     return (
       <>
       <div className="landing">
@@ -49,16 +40,16 @@ class HomeComponent extends Component {
         </div>
       </div>
       </div>
-      <div className="container"> 
+      {/* <div className="container"> 
       <h1 className="ui-kit__heading-primary">
         <span>Featured Events</span>
-          <Link className="ui-kit__sub-heading" to="/viewevents" ><br></br>VIEW ALL</Link>
+          <Link className="ui-kit__sub-heading" to="/any-event/all-events" >VIEW ALL</Link>
       </h1>  
       <hr/>
         <div className="row">
           {event}
         </div>
-      </div>
+      </div> */}
       </>
     );
   }
