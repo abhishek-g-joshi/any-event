@@ -20,7 +20,7 @@ class MainComponent extends Component {
             <div>
                 <Router>
                     <Header/>  
-                    <Route exact path="/" component={()=> <HomeComponent events={this.state.events}/>}/>           
+                    <Route exact path="/any-event/" component={()=> <HomeComponent events={this.state.events}/>}/>           
                     {/* <HomeComponent events={this.state.events}/> */}
                     <div className="container">
                         <Route exact path='/register' component={Register}/>

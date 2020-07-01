@@ -1,8 +1,8 @@
 .navbar {
-  background-color: #383f4d;
+  background-color: black;
 }
 .footer {
-  background-color: #383f4d;
+  background-color: black;
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
 }
@@ -24,7 +24,7 @@
   position: relative;
   background: url("./img/backg-01.png") no-repeat;
   background-size: 100% 100%;
-  background-position: center;
+  background-position: cover;
   height: 100vh;
   margin-bottom: 50px;
 }
@@ -51,8 +51,8 @@
 }
 
 .ui-kit__sub-heading {
-  padding-left: 65%;
-  font-size: 25px;
+  /* padding-left: 65%; */
+  font-size: 20px;
   color: #0093e2;
   cursor: pointer;
   text-align: left;
@@ -64,4 +64,17 @@
 .login {
   margin-top: 150px;
   margin-bottom: 165px;
+}
+
+@media screen and (max-width: 400px){
+.landing{
+  background-position: 0%;
+  background-size: cover;
+}
+.landing h1{
+  font-size: 60px;
+}
+.landing h4{
+  font-size: 21px;
+}
 }

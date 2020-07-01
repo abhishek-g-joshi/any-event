@@ -24,7 +24,7 @@ class Header extends Component {
                 <>
                 <Navbar dark className='navbar'expand='md'>
                     <div className="container">
-                    <Link to='/'>
+                    <Link to='/any-event/'>
                         <NavbarBrand>AnyEvent</NavbarBrand>
                     </Link>
                     <NavbarToggler onClick={this.toggleNav}/>
