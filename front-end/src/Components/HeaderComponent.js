@@ -24,19 +24,19 @@ class Header extends Component {
                 <>
                 <Navbar dark className='navbar'expand='md'>
                     <div className="container">
-                    <Link to='/'>
+                    <Link to='/any-event/'>
                         <NavbarBrand>AnyEvent</NavbarBrand>
                     </Link>
                     <NavbarToggler onClick={this.toggleNav}/>
                     <Collapse isOpen={this.state.isNavOpen} navbar>
                         <Nav className="ml-auto" navbar>
                             <NavItem>
-                                <Link className="nav-link" to='/login'>
+                                <Link className="nav-link" to='/any-event/login'>
                                     <button type="button" class="btn btn-outline-warning">Log In</button>
                                 </Link>
                             </NavItem>
                             <NavItem>
-                                <Link className="nav-link" to='/register'>
+                                <Link className="nav-link" to='/any-event/register'>
                                     <button type="button" class="btn btn-outline-warning">Sign Up</button>
                                 </Link>
                             </NavItem>

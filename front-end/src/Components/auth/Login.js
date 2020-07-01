@@ -10,6 +10,8 @@ import {
   Input,
 } from "reactstrap";
 import "../../App.css";
+import Events from '../EventComponent';
+import { Link } from "react-router-dom";
 
 class Login extends Component {
   constructor() {
@@ -25,20 +27,22 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   onSubmit(e) {
-    e.preventDefault();
+     e.preventDefault();
     const user = {
       email: this.state.email,
       password: this.state.password,
     };
 
     console.log(user);
+    
+
   }
   render() {
     return (
       <div className="login">
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto">
+            <div className="col-md-6 m-auto">
               <h1 className="display-4 text-center">Login</h1>
               <p className="lead text-center">Login to your AnyEvent Account</p>
               <Form onSubmit={this.onSubmit}>
@@ -64,15 +68,19 @@ class Login extends Component {
                     required
                   />
                 </Row>
+                <Link to="/any-event/all-events">
                 <Row className="form-group">
-                  <Button
-                    type="submit"
-                    className="btn btn-info btn-block mt-4"
-                    color="primary"
-                  >
+                 
+                    <button
+                      type="submit"
+                      className="btn btn-info btn-block"
+                      color="primary"
+                    >
                     Log In
-                  </Button>
+                    </button>
+                 
                 </Row>
+                </Link>
               </Form>
             </div>
           </div>

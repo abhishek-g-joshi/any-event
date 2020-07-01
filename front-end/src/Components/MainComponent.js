@@ -6,6 +6,7 @@ import HomeComponent from './HomeComponent'
 import EVENTS from '../shared/events';
 import Register from './auth/Register';
 import Login from './auth/Login';
+import EventComponent from './EventComponent';
 
 
 class MainComponent extends Component {
@@ -20,12 +21,13 @@ class MainComponent extends Component {
             <div>
                 <Router>
                     <Header/>  
-                    <Route exact path="/" component={()=> <HomeComponent events={this.state.events}/>}/>           
-                    {/* <HomeComponent events={this.state.events}/> */}
+                    <Route exact path="/any-event/" component={HomeComponent}/>           
                     <div className="container">
-                        <Route exact path='/register' component={Register}/>
-                        <Route exact path='/login' component={Login}/>
-                    </div>  
+                        <Route exact path='/any-event/register' component={Register}/>
+                        <Route exact path='/any-event/login' component={Login}/>
+                        {/* <Route exact path='/any-event/all-events' component={()=> <EventComponent events={this.state.events}/>}/>  */}
+                    </div> 
+                    <Route exact path='/any-event/all-events' component={()=> <EventComponent events={this.state.events}/>}/> 
                     <Footer/>
                 </Router>
             </div>

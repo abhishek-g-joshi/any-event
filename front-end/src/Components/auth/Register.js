@@ -42,7 +42,7 @@ class Register extends Component {
             <div className="register">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-8 m-auto">
+                        <div className="col-md-6 m-auto">
                             <h1 className="display-4 text-center">Sign Up</h1>
                             <p className="lead text-center">Create your AnyEvent Account</p>
                             <Form onSubmit={this.onSubmit}>
@@ -97,7 +97,7 @@ class Register extends Component {
                                     required/>
                                 </Row>  
                                 <Row className="form-group">
-                                 <Button type="submit" className="btn btn-info btn-block mt-4" color="primary">Sign Up</Button>
+                                 <Button type="submit" className="btn btn-info btn-block " color="primary">Sign Up</Button>
                                 </Row> 
                             </Form>
                         </div>
