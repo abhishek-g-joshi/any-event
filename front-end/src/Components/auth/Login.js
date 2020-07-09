@@ -1,16 +1,10 @@
 import React, { Component } from "react";
 import {
-  Breadcrumb,
-  BreadcrumbItem,
-  Button,
   Row,
-  Label,
-  Col,
   Form,
   Input,
 } from "reactstrap";
 import "../../App.css";
-import Events from '../EventComponent';
 import { Link } from "react-router-dom";
 
 class Login extends Component {
@@ -27,15 +21,13 @@ class Login extends Component {
     this.setState({ [e.target.name]: e.target.value });
   }
   onSubmit(e) {
-     e.preventDefault();
+    e.preventDefault();
     const user = {
       email: this.state.email,
       password: this.state.password,
     };
 
     console.log(user);
-    
-
   }
   render() {
     return (
@@ -69,17 +61,15 @@ class Login extends Component {
                   />
                 </Row>
                 <Link to="/any-event/all-events">
-                <Row className="form-group">
-                 
+                  <Row className="form-group">
                     <button
                       type="submit"
                       className="btn btn-info btn-block"
                       color="primary"
                     >
-                    Log In
+                      Log In
                     </button>
-                 
-                </Row>
+                  </Row>
                 </Link>
               </Form>
             </div>
