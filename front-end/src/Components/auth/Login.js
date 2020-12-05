@@ -5,7 +5,8 @@ import {
   Input,
 } from "reactstrap";
 import "../../App.css";
-import { Link } from "react-router-dom";
+import { Route, BrowserRouter, Redirect } from "react-router-dom";
+import EventComponent from "../EventComponent";
 
 class Login extends Component {
   constructor() {
@@ -16,6 +17,14 @@ class Login extends Component {
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+  }
+  routes(){
+    return (
+      <>
+             
+      </>
+    )
+
   }
   onChange(e) {
     this.setState({ [e.target.name]: e.target.value });
@@ -28,6 +37,7 @@ class Login extends Component {
     };
 
     console.log(user);
+    this.props.history.push('/any-event/all-events');
   }
   render() {
     return (
@@ -37,7 +47,7 @@ class Login extends Component {
             <div className="col-md-6 m-auto">
               <h1 className="display-4 text-center">Login</h1>
               <p className="lead text-center">Login to your AnyEvent Account</p>
-              <Form onSubmit={this.onSubmit}>
+              <Form onSubmit={this.onSubmit.bind(this)}>
                 <Row className="form-group">
                   <Input
                     type="email"
@@ -60,7 +70,6 @@ class Login extends Component {
                     required
                   />
                 </Row>
-                <Link to="/any-event/all-events">
                   <Row className="form-group">
                     <button
                       type="submit"
@@ -70,7 +79,6 @@ class Login extends Component {
                       Log In
                     </button>
                   </Row>
-                </Link>
               </Form>
             </div>
           </div>

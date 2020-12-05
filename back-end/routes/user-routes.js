@@ -27,7 +27,7 @@ router.post('/' , async (req, res ) =>{
     let newUser = await User.findOne( { email: req.body.email });
     if(newUser) return res.status(400).send("User already registered with this Email-ID");
 
-    newUser = new User(_.pick(req.body, ['name', 'email', 'password']));
+    newUser = new User(_.pick(req.body, ['name', 'email', 'college','gender','dateofBirth','password','confirmed_password']));
     const salt = await bcrypt.genSalt(5);
     newUser.password = await bcrypt.hash(newUser.password, salt); 
     newUser = await newUser.save();

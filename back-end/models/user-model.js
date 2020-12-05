@@ -3,6 +3,7 @@ Joi.objectId = require('joi-objectid')(Joi);
 const mongoose = require('mongoose');
 const jwt = require('jsonwebtoken');
 const config = require('config');
+const { string } = require('joi');
 
 const userSchema = new mongoose.Schema({
     name:{
@@ -18,7 +19,26 @@ const userSchema = new mongoose.Schema({
         minlength:10,
         maxlength:255
     },
+    college:{
+        type:String,
+        required:true,
+        minlength:3
+    },
+    gender:{
+        type:String,
+        minlength:0
+    },
+    dateofBirth:{
+        type:Date,
+        required:true
+    },
     password:{
+        type: String,
+        required: true,
+        minlength:8,
+        maxlength:1024
+    },
+    confirmed_password:{
         type: String,
         required: true,
         minlength:8,
@@ -36,7 +56,11 @@ function validateUser(newUser){
     const schema = Joi.object({
         name : Joi.string().min(3).max(100).required(),
         email : Joi.string().min(10).max(255).required().email(),
+        college : Joi.string().min(3).required(),
+        gender : Joi.string(),
+        dateofBirth : Joi.date().required(),
         password : Joi.string().min(8).max(1024).required(),
+        confirmed_password : Joi.string().min(8).max(1024).required()
     });
     return schema.validate(newUser);
 }

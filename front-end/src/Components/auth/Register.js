@@ -9,24 +9,29 @@ import {
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+import axios from 'axios';
+
 class Register extends Component {
   constructor() {
     super();
-    this.state = {
+    this.state = {value: '',
       name: "",
       email: "",
       college: "",
-      gender: "",
+      gender: "Male",
       dateofBirth: "",
       password: "",
-      password2: "",
+      confirmed_password: "",
       errors: {},
     };
     this.onChange = this.onChange.bind(this);
     this.onSubmit = this.onSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    // this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange = (selected) => {
     this.setState({
+      ...Button,
       dateofBirth: selected,
     });
   };
@@ -50,10 +55,13 @@ class Register extends Component {
       gender: this.state.gender,
       dateofBirth: date,
       password: this.state.password,
-      password2: this.state.password2,
+      confirmed_password: this.state.confirmed_password
     };
 
-    console.log(newUser);
+    // console.log(newUser);
+    axios.post('http://localhost:5000/users/', newUser)
+    .then(res => console.log(res.data));
+    this.props.history.push('/any-event/login');
   }
   render() {
     return (
@@ -112,9 +120,9 @@ class Register extends Component {
                         value={this.state.gender}
                         onChange={this.onChange}
                       >
-                        <option>Male</option>
-                        <option>Female</option>
-                        <option>Other</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
                       </Input>
                     </Col>
                     <Col>
@@ -130,6 +138,7 @@ class Register extends Component {
                         showYearDropdown
                         showMonthDropdown
                         scrollableMonthYearDropdown
+                        required
                       />
                     </Col>
                   </Row>
@@ -150,8 +159,8 @@ class Register extends Component {
                     type="password"
                     className="form-control form-control-lg"
                     placeholder="Confirmed Password"
-                    name="password2"
-                    value={this.state.password2}
+                    name="confirmed_password"
+                    value={this.state.confirmed_password}
                     onChange={this.onChange}
                     required
                   />
@@ -166,6 +175,7 @@ class Register extends Component {
                   </Button>
                 </Row>
               </Form>
+
             </div>
           </div>
         </div>
